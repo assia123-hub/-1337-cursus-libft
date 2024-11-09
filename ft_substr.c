@@ -6,25 +6,13 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:11:59 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/08 13:30:02 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:43:05 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

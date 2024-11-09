@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:45:34 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/05 15:02:05 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:56:08 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	a = (unsigned char *)dst;
 	b = (const unsigned char *)src;
-	i = 0;
 	if (a == NULL && b == NULL)
-		return (a);
+		return (NULL);
+	i = 0;
 	while (i < n)
 	{
 		a[i] = b[i];
@@ -46,4 +46,42 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (0);
+}*/
+
+/*int main()
+{
+    // Test ft_memcpy
+    char dst[100];
+    char src[] = "atoms\0\0\0\0";
+    
+    ft_memcpy(dst, src, 8);
+    printf("ft_memcpy result: %s\n", dst);  // Should print "atoms"
+
+    // Test ft_memcmp
+    char *s1 = "atoms\0\0\0\0";
+    char *s2 = "atoms\0abc";
+    size_t size = 8;
+
+    int i1 = memcmp(s1, s2, size);  // Standard memcmp
+    int i2 = ft_memcmp(s1, s2, size);  // Our implementation
+
+    if (i1 == i2)
+        printf("ft_memcmp passed!\n");
+    else
+        printf("ft_memcmp failed!\n");
+
+    // Test with some binary data
+    char *s3 = "\xff\0\0\xaa\0\xde\xffMACOSX\xff";
+    char *s4 = "\xff\0\0\xaa\0\xde\x00MBS";
+    size_t size2 = 9;
+    
+    int i3 = memcmp(s3, s4, size2);
+    int i4 = ft_memcmp(s3, s4, size2);
+    
+    if (i3 == i4)
+        printf("ft_memcmp with binary data passed!\n");
+    else
+        printf("ft_memcmp with binary data failed!\n");
+
+    return 0;
 }*/

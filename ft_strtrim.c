@@ -6,25 +6,13 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:43:03 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/08 13:54:51 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/08 18:43:26 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 static int	is_set(char c, const char *set)
 {
