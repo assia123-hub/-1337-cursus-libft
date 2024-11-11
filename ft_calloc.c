@@ -6,13 +6,13 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:42:23 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/06 11:23:46 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/09 19:42:38 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -21,10 +21,6 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	total_size = count * size;
-	if (total_size == 0)
-	{
-		return (0);
-	}
 	c = (char *)malloc(total_size);
 	if (c == NULL)
 	{

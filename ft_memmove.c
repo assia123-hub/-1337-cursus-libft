@@ -6,11 +6,12 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:46:15 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/09 18:48:14 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/10 09:29:49 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 #include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -20,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t			i;
 
 	if (dst == NULL || src == NULL)
-		return (dst);
+		return (NULL);
 	a = (unsigned char *)dst;
 	b = (unsigned char *)src;
 	if (b < a)
@@ -33,11 +34,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	else
-		i = 0;
-	while (i > 0)
 	{
-		a[len - i - 1] = b[len - i - 1];
-		i++;
+		i = 0;
+		while (i < len)
+		{
+			a[i] = b[i];
+			i++;
+		}
 	}
 	return (dst);
 }
@@ -60,12 +63,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	// Test case with valid input
 	ft_memmove(dst, src, 5);
-	printf("Result when both are valid: %s\n", dst); 
+	printf("Result when both are valid: %s\n", dst);
 		// Should copy first 5 chars of src to dst
 
 	// Test overlapping regions
 	ft_memmove(src + 2, src, 5);
-	printf("Result when regions overlap: %s\n", src); 
+	printf("Result when regions overlap: %s\n", src);
 		// Should correctly move the memory even with overlap
 
 	return (0);
