@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:47:22 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/06 11:29:03 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/15 11:35:41 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,10 @@ void	*ft_memset(void *b, int c, size_t len)
 }*/
 
 /*int main(void) {
-    int i = 42;                      // Initialize 'i' with 1337
-    ft_memset(&i, 0, 4);          // Set all bytes of 'i' to 0 (i becomes 0)
-    ft_memset(&i, 0b00000101, 2);
-	ft_memset(&i, 0b00111001, 1);        // Set the first byte of 'i' to 0b00101010 (42 in decimal)
-    printf("%d", i);                   // Print the modified value of 'i'
-    return 0;
+	int i = 42;         //1337
+	ft_memset(&i, 0, 4);
+	ft_memset(&i, 0b00000101, 2);
+	ft_memset(&i, 0b00111001, 1);       
+	printf("%d", i);c
+	return (0);
 }*/
-

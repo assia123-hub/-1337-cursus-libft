@@ -6,13 +6,13 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:27:54 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/04 18:56:06 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/14 20:31:13 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -36,11 +36,11 @@ char	*ft_strchr(const char *s, int c)
 
 /*int	main(void)
 {
-	char	*arr;
+	char	*str;
 	char	*result;
 
-	arr = "assia chalh";
-	result = ft_strchr(arr, 's');
+	str = "assiachlh";
+	result = ft_strchr(str, 'a');
 	printf("%s", result);
 	return (0);
 }*/

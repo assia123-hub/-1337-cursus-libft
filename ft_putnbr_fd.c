@@ -6,12 +6,14 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:26:49 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/04 19:00:51 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/15 14:50:26 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -36,18 +38,17 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-/*int	main(void)
-{
-	int	fd;
+// int	main(void)
+// {
+// 	int	fd;
 
-	fd = 1;
-	ft_putnbr_fd(42, fd);
-	write(fd, "\n", 1);
-	ft_putnbr_fd(-42, fd);
-	write(fd, "\n", 1);
-	ft_putnbr_fd(0, fd);
-	write(fd, "\n", 1);
-	ft_putnbr_fd(-2147483648, fd);
-	write(fd, "\n", 1);
-	return (0);
-}*/
+// 	fd = open("file.txt", O_RDWR | O_CREAT | O_TRUNC, 0666);
+// 	ft_putnbr_fd(-1234, fd);
+// 	printf("%d", fd);
+// 	if (fd == -1)
+// 	{
+// 		printf("%d", fd);
+// 		exit(1);
+// 	}
+// 	close(fd);
+// }

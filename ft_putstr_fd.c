@@ -6,12 +6,13 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:27:09 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/04 18:55:54 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/15 14:45:48 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
+#include <fcntl.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -25,10 +26,17 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-/*int	main(void)
-{
-	ft_putstr_fd("Hello, World!\n", 1);
-	ft_putstr_fd("This is a test string.\n", 1);
-	ft_putstr_fd("Goodbye!\n", 1);
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	int	fd;
+
+// 	fd = open("file.txt1", O_RDWR | O_CREAT | O_TRUNC, 0666);
+// 	ft_putstr_fd("assia chalh", fd);
+// 	printf("%d", fd);
+// 	if (fd == -1)
+// 	{
+// 		printf("%d", fd);
+// 		exit(1);
+// 	}
+// 	close(fd);
+// }

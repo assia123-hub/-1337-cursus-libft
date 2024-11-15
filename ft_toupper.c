@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:54:05 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/04 18:58:15 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/14 15:45:43 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	a;
-
-	a = (unsigned char)c;
-	if (c >= 'a' && c <= 'z')
+	if (c >= 97 && c <= 122)
 		c -= 32;
 	return (c);
 }

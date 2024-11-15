@@ -6,12 +6,12 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:33:58 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/05 19:52:01 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/13 10:59:14 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
+#include "stdio.h"
 
 size_t	ft_strlen(const char *s)
 {

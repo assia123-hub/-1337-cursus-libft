@@ -6,70 +6,53 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:46:15 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/10 09:29:49 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/15 11:32:16 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 #include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*a;
 	unsigned char	*b;
-	size_t			i;
 
-	if (dst == NULL || src == NULL)
+	if (!dst && !src)
 		return (NULL);
 	a = (unsigned char *)dst;
 	b = (unsigned char *)src;
 	if (b < a)
 	{
-		i = len;
-		while (i > 0)
+		while (len > 0)
 		{
-			i--;
-			a[i] = b[i];
+			len--;
+			a[len] = b[len];
 		}
 	}
 	else
 	{
-		i = 0;
-		while (i < len)
+		while (len--)
 		{
-			a[i] = b[i];
-			i++;
+			*a++ = *b++;
 		}
 	}
 	return (dst);
 }
-// no crash]: your memmove does not segfault when null params is sent
-//[no crash]: your memmove does not segfault when null params is sent
-/*int main()
+
+/*int	main(void)
 {
-	char src[0xF0] = "Hello, world!";
-	char dst[0xF0];
+	char	src[] = "Hello, World!";
+	char	dst[20];
+	char	str[] = "Hello, World!";
 
-	// Test case where src is NULL
-	ft_memmove(dst, ((void *)0), 5);
-	printf("Result when src is NULL: %s\n", dst);  // Should not crash,
-		dst unchanged
-
-	// Test case where dst is NULL
-	ft_memmove(((void *)0), src, 5);
-	printf("Result when dst is NULL: %s\n", src);  // Should not crash,
-		src unchanged
-
-	// Test case with valid input
-	ft_memmove(dst, src, 5);
-	printf("Result when both are valid: %s\n", dst);
-		// Should copy first 5 chars of src to dst
-
-	// Test overlapping regions
-	ft_memmove(src + 2, src, 5);
-	printf("Result when regions overlap: %s\n", src);
-		// Should correctly move the memory even with overlap
-
+	// bela overlap
+	printf("Before memmove: src = %s, dst = %s\n", src, dst);
+	ft_memmove(dst, src, 13);
+	printf("After memmove: src = %s, dst = %s\n", src, dst);
+	// m3a overlap
+	printf("Before memmove: str = %s\n", str);
+	ft_memmove(str + 7, str, 5);
+	printf("After memmove: str = %s\n", str);
 	return (0);
 }*/

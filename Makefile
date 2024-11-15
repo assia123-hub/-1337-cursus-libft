@@ -10,20 +10,20 @@ OBJ = $(SRC:%.c=%.o)
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 RM = rm -rf
-CFLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 $(NAME): $(OBJ)
-	$(AR) rcs $@ $^
+	@$(AR) rc $@ $^
 
 all: $(NAME)
 
 clean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:32:50 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/04 20:10:46 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/14 18:42:58 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = '\0';
 	return (ft_strlen(src));
 }
+
+/*int	main(void)
+{
+	char	dst[10];
+	size_t	i;
+
+	i = ft_strlcpy(dst, "chalh", 12);
+	printf("%zu", i);
+	return (0);
+}*/

@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:43:03 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/08 18:43:26 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/13 10:53:40 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	while (s1[start] && is_set(s1[start], set))
-	{
 		start++;
-	}
 	while (end >= start && is_set(s1[end], set))
-	{
 		end--;
-	}
 	if (end < start)
 	{
 		trim = (char *)malloc(1);
@@ -57,9 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!trim)
 		return (NULL);
 	while (start <= end)
-	{
 		trim[i++] = s1[start++];
-	}
 	trim[i] = '\0';
 	return (trim);
 }

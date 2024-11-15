@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:42:23 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/09 19:42:38 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/14 17:49:33 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,15 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*c;
-	size_t	total_size;
+	size_t	t_size;
 	size_t	i;
 
-	total_size = count * size;
-	c = (char *)malloc(total_size);
-	if (c == NULL)
-	{
-		return (NULL);
-	}
 	i = 0;
-	while (i < total_size)
+	t_size = count * size;
+	c = (char *)malloc(t_size);
+	if (c == NULL)
+		return (NULL);
+	while (i < t_size)
 	{
 		c[i] = 0;
 		i++;
@@ -37,19 +35,18 @@ void	*ft_calloc(size_t count, size_t size)
 
 /*int	main(void)
 {
-	size_t	j;
-	char	*ptr;
+	size_t j;
+	size_t count;
+	char *ptr;
 
+	count = 7;
 	j = 0;
-	ptr = ft_calloc(3, 4);
-	if (ptr)
+	ptr = ft_calloc(count, sizeof(int));
+	while (j < count)
 	{
-		while (j < 12)
-		{
-			printf("%d ", ptr[j]);
-			j++;
-		}
+		printf("ptr[%zu] = %d\n", j, ptr[j]);
+		j++;
 	}
+	free(ptr);
 	return (0);
 }*/
-//[fail]: your calloc don't work with 0 size

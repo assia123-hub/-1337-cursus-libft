@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 20:49:24 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/09 18:50:56 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/15 18:23:10 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 	i = count - 1;
 	while (num > 0)
 	{
-		dst[i--] = (num % 10) + (int)48;
+		dst[i--] = (num % 10) + '0';
 		num = num / 10;
 	}
 	if (n == 0)
@@ -60,12 +60,12 @@ char	*ft_itoa(int n)
 	return (dst);
 }
 
-/*int	main(void)
-{
-	printf("%s\n", ft_itoa(-123));
-	printf("%s\n", ft_itoa(-2147483648));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(123));
-	printf("%s\n", ft_itoa(-9876));
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	printf("%s\n", ft_itoa(-123));
+// 	printf("%s\n", ft_itoa(-2147483648));
+// 	printf("%s\n", ft_itoa(0));
+// 	printf("%s\n", ft_itoa(123));
+// 	printf("%s\n", ft_itoa(-9876));
+// 	return (0);
+// }
