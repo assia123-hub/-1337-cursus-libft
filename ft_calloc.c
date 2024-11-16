@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:42:23 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/14 17:49:33 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 16:40:00 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,20 @@ void	*ft_calloc(size_t count, size_t size)
 	return (c);
 }
 
-/*int	main(void)
-{
-	size_t j;
-	size_t count;
-	char *ptr;
+// int	main(void)
+// {
+// 	size_t j;
+// 	size_t count;
+// 	char *ptr;
 
-	count = 7;
-	j = 0;
-	ptr = ft_calloc(count, sizeof(int));
-	while (j < count)
-	{
-		printf("ptr[%zu] = %d\n", j, ptr[j]);
-		j++;
-	}
-	free(ptr);
-	return (0);
-}*/
+// 	count = 7;
+// 	j = 0;
+// 	ptr = ft_calloc(count, sizeof(int));
+// 	while (j < count)
+// 	{
+// 		printf("%d\n", ptr[j]);
+// 		j++;
+// 	}
+// 	free(ptr);
+// 	return (0);
+// }

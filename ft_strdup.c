@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:29:11 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/14 17:21:18 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 15:54:53 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ char	*ft_strdup(const char *s1)
 	cpy[i] = '\0';
 	return (cpy);
 }
-
-/*int	main(void)
-{
-	char	*arr;
-
-	arr = "hellloooooo";
-	printf("%s", ft_strdup(arr));
-	free(arr);
-}*/

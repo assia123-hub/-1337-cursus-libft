@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:25:41 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/15 14:46:03 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 15:54:36 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-// int	main(void)
-// {
-// 	int	fd;
-
-// 	fd = open("file.txt", O_RDWR | O_CREAT | O_TRUNC, 0666);
-// 	ft_putendl_fd("hello world", fd);
-// 	printf("%d", fd);
-// 	if (fd == -1)
-// 	{
-// 		printf("%d", fd);
-// 		exit(1);
-// 	}
-// 	close(fd);
-// }

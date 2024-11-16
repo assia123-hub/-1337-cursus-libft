@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:34:14 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/13 11:08:45 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 17:32:52 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	a[i] = '\0';
 	return (a);
 }
-
-/*int	main(void)
-{
-	printf("%s", ft_strjoin("assia ", "chalh"));
-	return (0);
-}*/

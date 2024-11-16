@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:43:03 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/13 10:53:40 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 17:33:27 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	is_set(char c, const char *set)
+static int	is_set(char const c, const char *set)
 {
-	while (*set)
+	int	i;
+
+	i = 0;
+	while (set[i])
 	{
-		if (*set == c)
+		if (set[i] == c)
 			return (1);
-		set++;
+		i++;
 	}
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+static char	*allocate_and_fill(char const *s1, int start, int end)
 {
-	int		start;
-	int		end;
 	char	*trim;
 	int		i;
 
-	start = 0;
-	end = ft_strlen(s1) - 1;
 	i = 0;
-	if (!s1 || !set)
-		return (NULL);
-	while (s1[start] && is_set(s1[start], set))
-		start++;
-	while (end >= start && is_set(s1[end], set))
-		end--;
 	if (end < start)
 	{
 		trim = (char *)malloc(1);
@@ -49,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		trim[0] = '\0';
 		return (trim);
 	}
-	trim = (char *)malloc(end - start + 2);
+	trim = (char *)malloc(end - start + 1 + 1);
 	if (!trim)
 		return (NULL);
 	while (start <= end)
@@ -58,7 +51,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trim);
 }
 
-/*int	main(void)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	printf("%s", ft_strtrim("ababaaaMy name is Simonbbaaabbad", "ab"));
-}*/
+	int	start;
+	int	end;
+
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	if (!s1 || !set)
+		return (NULL);
+	while (s1[start] && is_set(s1[start], set))
+		start++;
+	while (end >= start && is_set(s1[end], set))
+		end--;
+	return (allocate_and_fill(s1, start, end));
+}

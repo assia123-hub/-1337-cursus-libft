@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 17:11:59 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/15 18:49:02 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 17:32:08 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!a)
 		return (NULL);
 	j = 0;
-	while (start < ln && j < len)
+	while (j < len)
 		a[j++] = s[start++];
 	a[j] = '\0';
 	return (a);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_substr("assiachalh", 4, 4));
-// 	return (0);
-// }

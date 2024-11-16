@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 20:49:24 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/15 18:23:10 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 18:42:07 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int	count_size(int n)
+static int	count_size(int n) // kathssab chehal andak mn number
 {
 	int	i;
 
@@ -29,17 +29,11 @@ static int	count_size(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+static char	*is_number(long num, int count, int n)
 {
 	char	*dst;
-	int		count;
-	long	num;
 	int		i;
 
-	num = n;
-	count = count_size(num);
-	if (n == 0)
-		count = 1;
 	dst = (char *)malloc((count + 1) * sizeof(char));
 	if (!dst)
 		return (NULL);
@@ -60,12 +54,14 @@ char	*ft_itoa(int n)
 	return (dst);
 }
 
-// int	main(void)
-// {
-// 	printf("%s\n", ft_itoa(-123));
-// 	printf("%s\n", ft_itoa(-2147483648));
-// 	printf("%s\n", ft_itoa(0));
-// 	printf("%s\n", ft_itoa(123));
-// 	printf("%s\n", ft_itoa(-9876));
-// 	return (0);
-// }
+char	*ft_itoa(int n)
+{
+	int		count;
+	long	num;
+
+	num = n;
+	count = count_size(num);
+	if (n == 0)
+		count = 1;
+	return (is_number(num, count, n));
+}

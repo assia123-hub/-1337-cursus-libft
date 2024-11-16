@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:26:49 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/15 14:50:26 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 15:54:42 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(n, fd);
 	}
 }
-
-// int	main(void)
-// {
-// 	int	fd;
-
-// 	fd = open("file.txt", O_RDWR | O_CREAT | O_TRUNC, 0666);
-// 	ft_putnbr_fd(-1234, fd);
-// 	printf("%d", fd);
-// 	if (fd == -1)
-// 	{
-// 		printf("%d", fd);
-// 		exit(1);
-// 	}
-// 	close(fd);
-// }

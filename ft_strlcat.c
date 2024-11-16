@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:30:40 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/15 19:36:59 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 15:56:14 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[lendst + i] = '\0';
 	return (lendst + lensrc);
 }
-
-// int	main(void)
-// {
-// 	char	dst[20] = "Hello, ";
-// 	char	src[] = "World!";
-// 	size_t	n;
-
-// 	n = ft_strlcat(dst, src, 12);
-// 	printf("%zu", n);
-// 	return (0);
-// }

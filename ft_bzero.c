@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:14:08 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/04 19:55:48 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 16:35:13 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,17 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-/*int	main(void)
-{
-	char	arr[] = "assia chalh";
-	size_t	i;
+// int	main(void)
+// {
+// 	char	arr[] = "assia chalh";
+// 	size_t	i;
 
-	i = 0;
-	ft_bzero(arr, sizeof(arr));
-	while (i < sizeof(arr))
-	{
-		printf("%d", arr[i]);
-		i++;
-	}
-	return (0);
-}*/
+// 	i = 0;
+// 	ft_bzero(arr, sizeof(arr));
+// 	while (i < sizeof(arr))
+// 	{
+// 		printf("%d", arr[i]);
+// 		i++;
+// 	}
+// 	return (0);
+// }

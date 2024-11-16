@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:27:09 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/15 14:45:48 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 15:54:47 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-// int	main(void)
-// {
-// 	int	fd;
-
-// 	fd = open("file.txt1", O_RDWR | O_CREAT | O_TRUNC, 0666);
-// 	ft_putstr_fd("assia chalh", fd);
-// 	printf("%d", fd);
-// 	if (fd == -1)
-// 	{
-// 		printf("%d", fd);
-// 		exit(1);
-// 	}
-// 	close(fd);
-// }

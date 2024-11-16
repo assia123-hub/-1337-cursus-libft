@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:27:59 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/09 18:43:00 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/16 17:39:06 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -39,7 +39,7 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-char	*fill_word(char const *s, char c)
+static char	*fill_word(char const *s, char c)
 {
 	int		len;
 	int		i;
@@ -65,7 +65,7 @@ char	*fill_word(char const *s, char c)
 	return (str);
 }
 
-void	ft_free(char **result)
+static void	ft_free(char **result)
 {
 	int	i;
 
@@ -78,23 +78,14 @@ void	ft_free(char **result)
 	free(result);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**fill_result(char **result, const char *s, char c)
 {
-	int		word_count;
-	char	**result;
-	int		i;
-	int		j;
-	int		start;
+	int	i;
+	int	j;
+	int	start;
 
 	i = 0;
 	j = 0;
-	start = 0;
-	if (!s)
-		return (NULL);
-	word_count = count_words(s, c);
-	result = (char **)malloc(sizeof(char *) * (word_count + 1));
-	if (!result)
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] == c && s[i])
@@ -105,37 +96,47 @@ char	**ft_split(char const *s, char c)
 		if (i > start)
 		{
 			result[j] = fill_word(s + start, c);
-			if (!result[j])
+			if (!result[j++])
 			{
 				ft_free(result);
 				return (NULL);
 			}
-			j++;
 		}
 	}
 	result[j] = NULL;
 	return (result);
 }
 
-/*int	main(void)
+char	**ft_split(char const *s, char c)
 {
-	char	*s;
-	char	delimiter;
 	char	**result;
-	int		i;
+	int		word_count;
 
-	i = 0;
-	s = "Hello world this is a test";
-	delimiter = ' ';
-	result = ft_split(s, delimiter);
-	if (result)
-	{
-		while (result[i])
-		{
-			printf("Word %d: %s\n", i, result[i]);
-			i++;
-		}
-		ft_free(result);
-	}
-	return (0);
-}*/
+	if (!s)
+		return (NULL);
+	word_count = count_words(s, c);
+	result = (char **)malloc(sizeof(char *) * (word_count + 1));
+	if (!result)
+		return (NULL);
+	return (fill_result(result, s, c));
+}
+
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	delimiter;
+// 	char	**result;
+// 	int		i;
+
+// 	i = 0;
+// 	s = "Hello, world, this is a test";
+// 	delimiter = ',';
+// 	result = ft_split(s, delimiter);
+// 	while (result[i])
+// 	{
+// 		printf("%s", result[i]);
+// 		i++;
+// 	}
+// 	ft_free(result);
+// 	return (0);
+// }
