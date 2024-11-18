@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:45:34 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/16 15:52:28 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/18 09:45:34 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*b;
 	size_t			i;
 
+	if (!dst && !src)
+		return (NULL);
 	a = (unsigned char *)dst;
 	b = (unsigned char *)src;
-	if (a == NULL && b == NULL)
-		return (NULL);
 	i = 0;
 	while (i < n)
 	{

@@ -6,15 +6,13 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 20:49:24 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/16 18:42:07 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/17 09:05:40 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-static int	count_size(int n) // kathssab chehal andak mn number
+static int	count_size(int n)
 {
 	int	i;
 

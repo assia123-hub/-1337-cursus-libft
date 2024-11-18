@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:38:25 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/16 15:44:16 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/17 15:16:11 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == a)
-		{
 			last = s;
-		}
 		s++;
 	}
 	if (a == '\0')
-	{
 		return ((char *)s);
-	}
 	return ((char *)last);
 }

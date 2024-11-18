@@ -6,7 +6,7 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:43:56 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/16 15:47:05 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/17 15:10:20 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (a[i] == b)
 		{
-			return ((char *)(a + i));
+			return ((void *)(a + i));
 		}
 		i++;
 	}

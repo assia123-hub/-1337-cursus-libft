@@ -6,13 +6,11 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:43:03 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/16 17:33:27 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/18 19:08:31 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	is_set(char const c, const char *set)
 {
@@ -42,7 +40,7 @@ static char	*allocate_and_fill(char const *s1, int start, int end)
 		trim[0] = '\0';
 		return (trim);
 	}
-	trim = (char *)malloc(end - start + 1 + 1);
+	trim = (char *)malloc(end - start + 1);
 	if (!trim)
 		return (NULL);
 	while (start <= end)

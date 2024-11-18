@@ -6,19 +6,19 @@
 /*   By: aschalh <aschalh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:25:41 by aschalh           #+#    #+#             */
-/*   Updated: 2024/11/16 15:54:36 by aschalh          ###   ########.fr       */
+/*   Updated: 2024/11/17 15:40:00 by aschalh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
